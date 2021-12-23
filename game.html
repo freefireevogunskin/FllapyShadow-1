@@ -1,0 +1,80 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>FLLAPYSHADOW</title>
+<!--
+NAMA GAME : FLLAPYSHADOW
+NAMA PEMBUATNYA : LASST THAN RENZEN
+-->
+<style>
+#canvas{
+border:2px solid black;
+width:380;
+height:750;
+display:block;
+}
+#target{
+	background:#C8C8C8;
+	width:90px;
+	height:90px;
+	position:absolute;
+	top:450px;
+	left:150px;
+	display:none;
+	animation:anim 1s infinite;
+	background:url("ulang1.png");
+}
+@keyframes fadeOut{
+	100%{opacty:0;visibility: hidden}
+}
+@keyframes anim{
+	to{background:url("ulang1.png");}
+	from{background:url("ulang2.png");}
+}
+.loading{
+	position:fixed;
+	z-index:999;
+	top:0;
+	left:0;
+	display:flex;
+	background: black ;
+	width:100%;
+	height:100%;
+    justify-content: center;
+    align-items: center;
+}
+.loading>img{
+	width:512px;
+	height:512px;
+	}
+.loading.hidden{
+	animation:fadeOut 1s;
+	animation-fill-mode:forwards;
+	}
+body{
+	background:black;
+}
+</style>
+<script src="jquery.min.js"></script>
+</head>
+<body onload="loding()">
+</div>
+<div class="loading hidden"><img src="l1oad.gif"></img></div>
+<canvas id="canvas">not support JavaScript</canvas>
+<div id="target" onClick="document.location.reload();">
+<script src="game.js"></script>
+<script>
+	/*
+	var aw = document.getElementById("loading");
+	function loding() {
+	setTimeout(sdd(),60000);
+	}
+	function sdd(){
+	aw.style.display = "none";
+	canvas.style.display="block"
+	}*/
+	const mydev = document.querySelector("#loading");
+	mydev.className+="hidden";
+</script>
+</body>
+<html>
