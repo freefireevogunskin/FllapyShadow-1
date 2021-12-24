@@ -39,12 +39,12 @@ function start(){
 	var cw = canvas.width;
 	var ch = canvas.height;
 	
-	var bgX=0,mulai=false,z=180;
+	var bgX=0,mulai=false,z=280;
 	function splash (){
 		ctx.clearRect(0,0,cw,ch);
 		ctx.drawImage(bg,bgX-=2,0);
 		
-		if(bgX==-300){
+		if(bgX==-330){
 			bgX=0;
 			}
 		ctx.fillStyle="#000000";
@@ -52,8 +52,12 @@ function start(){
 		ctx.fillText("KLIK UNTUK MUALI",125,650);
 		
 		ctx.drawImage(title,94,67);
-		ctx.drawImage(ps1,100,z+=2);
 		
+		if(z==180){
+			ctx.drawImage(ps1,100,z+=2);
+			}else{
+				ctx.drawImage(ps1,100,z+=2);
+			}
 		if(z>=330){
 			z=280;
 			}
@@ -75,7 +79,7 @@ function start(){
 			this.x=0;
 			this.render=function (){
 				ctx.drawImage(bg,this.x--,0);
-				if(this.x==-300){
+				if(this.x==-330){
 					this.x=0;
 				}
 					
@@ -178,8 +182,8 @@ function start(){
 				rendertiang();
 				kena();
 				ctx.fillStyle="#FFFFFF"
-				ctx.font="Bold 50px Monospace";
-				ctx.fillText(skor,160,60);
+				ctx.font="Bold 80px Monospace";
+				ctx.fillText(skor,160,80);
 				ctx.restore();
 			}//end animasi
 			var interval = setInterval (animation,30);
@@ -189,7 +193,7 @@ function start(){
 				player.y-=75;
 				ganti=true;
 			});
-			console.log("lokasi lagu: "+latar.x);
+			console.log("LESST THAN RENZEN");
 		}//batas fungsi game
 		
 	
