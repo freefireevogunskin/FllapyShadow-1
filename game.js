@@ -44,7 +44,7 @@ function start(){
 		ctx.clearRect(0,0,cw,ch);
 		ctx.drawImage(bg,bgX-=2,0);
 		
-		if(bgX==-12584){
+		if(bgX==-300){
 			bgX=0;
 			}
 		ctx.fillStyle="#000000";
@@ -75,9 +75,7 @@ function start(){
 			this.x=0;
 			this.render=function (){
 				ctx.drawImage(bg,this.x--,0);
-				
-				if(this.x==633){
-					hiro.play();
+				if(this.x==-300){
 					this.x=0;
 				}
 					
